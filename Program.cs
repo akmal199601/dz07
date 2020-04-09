@@ -32,6 +32,12 @@ namespace hw3
                 System.Console.WriteLine(z);
             }
             System.Console.WriteLine($"Удалить {fs}");
+            System.Console.WriteLine("Лист после метода UnShift");
+            akmal.UnShift(ref x, 8);
+            foreach (var z in x)
+            {
+                System.Console.WriteLine(z);
+            }
             Console.ReadKey();
         }
     }
@@ -166,6 +172,48 @@ namespace hw3
             decimal fs = arr[0];
             arr = aki;
             return fs;
+        }
+        public static void UnShift(ref string[] arr, string ne)
+        {
+            string[] aki = new string[arr.Length + 1];
+            aki[0] = ne;
+            for (int i = 0; i < aki.Length - 1; i++)
+            {
+                aki[i + 1] = arr[i];
+            }
+
+
+            arr = aki;
+        }
+        public static void UnShift(ref double[] arr, double ne)
+        {
+            double[] aki = new double[arr.Length + 1];
+            aki[0] = ne;
+            for (int i = 0; i < aki.Length - 1; i++)
+            {
+                aki[i + 1] = arr[i];
+            }
+            arr = aki;
+        }
+        public static void UnShift(ref int[] arr, int ne)
+        {
+            int[] aki = new int[arr.Length + 1];
+            aki[0] = ne;
+            for (int i = 0; i < aki.Length - 1; i++)
+            {
+                aki[i + 1] = arr[i];
+            }
+            arr = aki;
+        }
+        public static void UnShift(ref decimal[] arr, decimal ne)
+        {
+            decimal[] aki = new decimal[arr.Length + 1];
+            aki[0] = ne;
+            for (int i = 0; i < aki.Length - 1; i++)
+            {
+                aki[i + 1] = arr[i];
+            }
+            arr = aki;
         }
     }
 }
