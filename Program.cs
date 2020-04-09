@@ -25,6 +25,13 @@ namespace hw3
             {
                 System.Console.WriteLine(z);
             }
+            System.Console.WriteLine("Лист полсе метода Shift");
+            int fs = akmal.Shift(ref x);
+            foreach (var z in x)
+            {
+                System.Console.WriteLine(z);
+            }
+            System.Console.WriteLine($"Удалить {fs}");
             Console.ReadKey();
         }
     }
@@ -115,6 +122,50 @@ namespace hw3
             }
             aki[aki.Length - 1] = ne;
             arr = aki;
+        }
+        public static string Shift(ref string[] arr)
+        {
+            string[] aki = new string[arr.Length - 1];
+            for (int i = 0; i < aki.Length; i++)
+            {
+                aki[i] = arr[i + 1];
+            }
+            string fs = arr[0];
+            arr = aki;
+            return fs;
+        }
+        public static double Shift(ref double[] arr)
+        {
+            double[] aki = new double[arr.Length - 1];
+            for (int i = 0; i < aki.Length; i++)
+            {
+                aki[i] = arr[i + 1];
+            }
+            double fs = arr[0];
+            arr = aki;
+            return fs;
+        }
+        public static int Shift(ref int[] arr)
+        {
+            int[] aki = new int[arr.Length - 1];
+            for (int i = 0; i < aki.Length; i++)
+            {
+                aki[i] = arr[i + 1];
+            }
+            int fs = arr[0];
+            arr = aki;
+            return fs;
+        }
+        public static decimal Shift(ref decimal[] arr)
+        {
+            decimal[] aki = new decimal[arr.Length - 1];
+            for (int i = 0; i < aki.Length; i++)
+            {
+                aki[i] = arr[i + 1];
+            }
+            decimal fs = arr[0];
+            arr = aki;
+            return fs;
         }
     }
 }
